@@ -6,17 +6,15 @@ import LayoutPage from './components/LayoutPage'
 
 
 function App() {
-  return (<div>
-
+  return (
     < Router >
-
       <Switch>
         <Route exact path="/" component={LayoutPage}></Route>
         <Route path="/404" component={NoPage} />
         <Redirect to='/404' />
       </Switch>
     </Router >
-  </div>)
+  )
 }
 
 
