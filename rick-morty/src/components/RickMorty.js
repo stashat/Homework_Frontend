@@ -35,7 +35,7 @@ class RickMorty extends React.Component {
     }
     searchButton = () => {
         //KARAKTERI
-        if (this.state.selectedValue === 'Karakteri') {
+        if (this.state.selectedValue === 'Characters') {
             axios.get('https://rickandmortyapi.com/api/character/').then(res => {
                 this.setState({ characters: res.data.results }, () => {
                     console.log(this.state.characters);
@@ -85,7 +85,7 @@ class RickMorty extends React.Component {
             })
         }
         //EPIZODE
-        else if (this.state.selectedValue === 'Epizode') {
+        else if (this.state.selectedValue === 'Episodes') {
             axios.get('https://rickandmortyapi.com/api/episode').then(res => {
                 this.setState({ episodes: res.data.results }, () => {
                     console.log(this.state.episodes);
@@ -129,7 +129,7 @@ class RickMorty extends React.Component {
             })
         }
         //LOKACIJE
-        else if (this.state.selectedValue === 'Lokacije') {
+        else if (this.state.selectedValue === 'Locations') {
             axios.get('https://rickandmortyapi.com/api/location').then(res => {
                 this.setState({ locations: res.data.results }, () => {
                     console.log(this.state.locations);
@@ -180,7 +180,7 @@ class RickMorty extends React.Component {
                 <Select
                     showSearch
                     style={{ width: 200 }}
-                    placeholder="Select a person"
+                    placeholder="Select a category"
                     optionFilterProp="children"
                     onChange={this.onChange}
                     onFocus={this.onFocus}
@@ -190,9 +190,9 @@ class RickMorty extends React.Component {
                         option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                     }
                 >
-                    <Option value="Epizode">Epizode</Option>
-                    <Option value="Karakteri">Karakteri</Option>
-                    <Option value="Lokacije">Lokacije</Option>
+                    <Option value="Episodes">Epizode</Option>
+                    <Option value="Characters">Karakteri</Option>
+                    <Option value="Locations">Lokacije</Option>
                 </Select>
                 <Tooltip title="search">
                     <Button type="primary" shape="circle" icon={<SearchOutlined />} onClick={this.searchButton} className='searchButton' />
