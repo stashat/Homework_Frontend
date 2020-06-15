@@ -65,3 +65,9 @@
 .site-layout .site-layout-background {
   background: #fff;
 }
+.tableMargin{
+  margin-top: 20px;
+}
+.imageSize{
+  width: 50%;
+}

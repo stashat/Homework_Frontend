@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
+import axios from 'axios';
 
 const layout = {
     labelCol: { span: 8 },
@@ -17,7 +18,14 @@ const validateMessages = {
 class Contact extends React.Component {
     state = {}
     onFinish = (values) => {
-        console.log(values);
+        // console.log(values);
+
+        axios.post(`https://jsonblob.com/api/jsonBlob`, { values })
+            .then(res => {
+                console.log(res)
+                console.log(res.data)
+            })
+
     };
     render() {
         return (
