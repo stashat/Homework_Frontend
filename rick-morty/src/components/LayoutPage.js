@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu } from 'antd';
 import {
     SmileOutlined,
     PieChartOutlined,
@@ -10,8 +10,8 @@ import Dashboard from './Dashboard'
 import Contact from './Contact'
 import RickMorty from './RickMorty'
 
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
+const { Header, Content, Sider } = Layout;
+
 
 
 class LayoutPage extends React.Component {
@@ -54,7 +54,6 @@ class LayoutPage extends React.Component {
                                 </Switch>
                             </div>
                         </Content>
-                        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
                     </Layout>
                 </Layout>
             </Router>
