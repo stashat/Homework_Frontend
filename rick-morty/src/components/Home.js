@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom'
+
 const { Header, Content } = Layout;
 
 class Home extends React.Component {
@@ -16,7 +17,8 @@ class Home extends React.Component {
                 </Menu>
             </Header>
             <Content style={{ padding: '0 50px' }}>
-                <div className="site-layout-content"><h1>Home Page</h1></div>
+                <div className="site-layout-content">
+                    <h1>Home Page</h1></div>
             </Content>
         </Layout>);
     }

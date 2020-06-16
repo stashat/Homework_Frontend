@@ -5,6 +5,7 @@ import NoPage from './components/NoPage'
 import LayoutPage from './components/LayoutPage'
 import Home from './components/Home'
 import Login from './components/Login'
+import { ProtectedRoute } from './components/ProtectedRoute'
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     < Router >
       <Switch>
         <Route exact path="/" component={Home}></Route>
-        <Route path="/dashboard" component={LayoutPage}></Route>
+        <ProtectedRoute path="/dashboard" component={LayoutPage} />
         <Route path='/login' component={Login}></Route>
         <Route path="/404" component={NoPage} />
         <Redirect to='/404' />

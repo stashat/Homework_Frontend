@@ -5,11 +5,13 @@ import {
     SmileOutlined,
     PieChartOutlined,
     ContactsOutlined,
+    LogoutOutlined
 } from '@ant-design/icons';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Dashboard from './Dashboard'
 import Contact from './Contact'
 import RickMorty from './RickMorty'
+import auth from '../auth'
 
 const { Header, Content, Sider } = Layout;
 
@@ -40,6 +42,14 @@ class LayoutPage extends React.Component {
                             </Menu.Item>
                             <Menu.Item key="3" icon={<SmileOutlined />}>
                                 <Link to='/dashboard/rick-morty'>Rick and Morty</Link>
+                            </Menu.Item>
+                            <Menu.Item key="4" icon={<LogoutOutlined />} onClick={() => {
+                                auth.logout(() => {
+                                    this.props.history.push('/')
+                                    alert('You are logged out!')
+                                })
+                            }}>
+                                Log Out
                             </Menu.Item>
                         </Menu>
                     </Sider>

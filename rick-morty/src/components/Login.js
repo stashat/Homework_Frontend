@@ -1,12 +1,19 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import auth from '../auth'
 
 class Login extends React.Component {
-    state = {}
-
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
     onFinish = (values) => {
         console.log('Received values of form: ', values);
+        auth.login(() => {
+            this.props.history.push('/dashboard')
+            alert('You are logged in!')
+        })
     }
 
     render() {
