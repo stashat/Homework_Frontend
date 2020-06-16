@@ -48,7 +48,7 @@ class RickMorty extends React.Component {
                         name: character.name,
                         status: character.status,
                         species: character.species,
-                        image: <img src={character.image} className='imageSize'></img>,
+                        image: <img src={character.image} alt={character.name} className='imageSize'></img>,
                     })
                 });
                 this.setState({ dataSource: dataSourceArray }, () => {
@@ -190,9 +190,9 @@ class RickMorty extends React.Component {
                         option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                     }
                 >
-                    <Option value="Episodes">Epizode</Option>
-                    <Option value="Characters">Karakteri</Option>
-                    <Option value="Locations">Lokacije</Option>
+                    <Option value="Episodes">Episodes</Option>
+                    <Option value="Characters">Characters</Option>
+                    <Option value="Locations">Locations</Option>
                 </Select>
                 <Tooltip title="search">
                     <Button type="primary" shape="circle" icon={<SearchOutlined />} onClick={this.searchButton} className='searchButton' />

@@ -69,5 +69,37 @@
   margin-top: 20px;
 }
 .imageSize{
-  width: 50%;
+  width: 20%;
+}
+
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+.formPos{
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  
+}
+.formColor{
+  background-color: rgb(164, 209, 226);
+  text-align: center;
+  padding: 40px;
+  border-radius: 20%;
+  -webkit-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);;
 }

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Layout, Menu } from 'antd';
 import {
@@ -32,13 +33,13 @@ class LayoutPage extends React.Component {
                         <div className="logo" />
                         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                             <Menu.Item key="1" icon={<PieChartOutlined />}>
-                                <Link to='/'>Dashboard</Link>
+                                <Link to='/dashboard'>Dashboard</Link>
                             </Menu.Item>
                             <Menu.Item key="2" icon={<ContactsOutlined />}>
-                                <Link to='/contact-us'>Contact us</Link>
+                                <Link to='/dashboard/contact-us'>Contact us</Link>
                             </Menu.Item>
                             <Menu.Item key="3" icon={<SmileOutlined />}>
-                                <Link to='/rick-morty'>Rick and Morty</Link>
+                                <Link to='/dashboard/rick-morty'>Rick and Morty</Link>
                             </Menu.Item>
                         </Menu>
                     </Sider>
@@ -48,9 +49,9 @@ class LayoutPage extends React.Component {
                             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
 
                                 <Switch>
-                                    <Route path="/" exact component={Dashboard} />
-                                    <Route path="/contact-us" component={Contact} />
-                                    <Route path="/rick-morty" component={RickMorty} />
+                                    <Route path="/dashboard" exact component={Dashboard} />
+                                    <Route exact path="/dashboard/contact-us" component={Contact} />
+                                    <Route exact path="/dashboard/rick-morty" component={RickMorty} />
                                 </Switch>
                             </div>
                         </Content>
@@ -62,5 +63,3 @@ class LayoutPage extends React.Component {
 }
 
 export default LayoutPage;
-
-
