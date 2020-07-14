@@ -13,7 +13,6 @@ class Home extends React.Component {
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
                     <Menu.Item key="1"><Link to='/dashboard'>Dashboard</Link></Menu.Item>
                     <Menu.Item key="2"><Link to='/login'>Login</Link></Menu.Item>
-
                 </Menu>
             </Header>
             <Content style={{ padding: '0 50px' }}>

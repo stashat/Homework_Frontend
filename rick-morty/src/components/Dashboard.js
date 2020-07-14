@@ -29,16 +29,13 @@ class Dashboard extends React.Component {
                             data: this.state.countries.map(info => info.NewDeaths),
                             backgroundColor: "rgba(240, 52, 52, 1)"
                         },
-
                         {
                             label: 'Total Deaths',
                             data: this.state.countries.map(info => info.TotalDeaths),
                             backgroundColor: "rgba(30, 139, 195, 1)"
 
                         }
-
                     ]
-
                 }}
                 options={{
                     maintainAspectRatio: false,
